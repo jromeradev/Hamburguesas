@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     var colPaises : ColeccionDePaises = ColeccionDePaises()
     var colHamburguesas : ColeccionDeHamburguesa = ColeccionDeHamburguesa()
+    var colColores: ColeccionDeColores = ColeccionDeColores()
     
     @IBOutlet weak var pais: UILabel!
     @IBOutlet weak var hamburguesas: UILabel!
@@ -29,7 +30,8 @@ class ViewController: UIViewController {
     @IBAction func cambiarDatos(sender: AnyObject) {
         pais.text = colPaises.obtenPais()
         hamburguesas.text = colHamburguesas.obtenHamburguesa()
-        
+        pais.textColor = colColores.obtenColor()
+        hamburguesas.textColor = colColores.obtenColor()
     }
 
 }
